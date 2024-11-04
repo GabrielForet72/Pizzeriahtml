@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Society - Carte des pizzas</title>
+    <!-- Lien CDN Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/CSS/style2.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- Header avec menu burger Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger custom-navbar">
+    <a class="navbar-brand" href="#">
+        <img src="/Medias/Red and Beige Illustrative Pizza Restaurant Logo (4).png" alt="Pizza Society Logo" class="custom-logo">
+    </a>
+    <!-- Bouton de menu burger visible uniquement en responsive -->
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Liens de navigation -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/HTML/carte.html">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/HTML/contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Scripts Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<!-- Section du titre -->
+<section class="hero-section">
+    <div class="hero-container">
+        <h1 class="neon-text" id="heroTitle">Pizza Society</h1>
+        <p class="hero-subtitle">Goûtez l'authenticité de Pizza Society : des pizzas maison, aux ingrédients frais et locaux, pour un moment unique.</p>
+        <a href="#pizza-section" class="btn-cta">Voir le Menu</a>
+    </div>
+</section>
+<section class="menu-intro">
+    <h2 class="menu-title">Notre carte des pizzas</h2>
+    <p class="menu-description">Découvrez nos spécialités préparées avec soin.</p>
+    <section id="pizza-section" class="pizza-menu">
+
+        <!-- Section Base Tomate -->
+        <div class="pizza-category">
+            <h2>Base Tomate</h2>
+            <div class="pizza-grid">
+                <div class="pizza-card">
+                    <img src="/Medias/Pizza/Margherita.png" alt="Pizza Margherita">
+                    <h3>Pizza Margherita</h3>
+                    <p>Tomate, mozzarella, basilic</p>
+                    <span class="price">10,00 €</span>
+                    <a href="#" class="btn-order">Commander</a>
+                </div>
+                <div class="pizza-card">
+                    <img src="/Medias/Pizza/Pepperoni.png" alt="Pizza Pepperoni">
+                    <h3>Pizza Pepperoni</h3>
+                    <p>Tomate, mozzarella, pepperoni</p>
+                    <span class="price">12,00 €</span>
+                    <a href="#" class="btn-order">Commander</a>
+                </div>
+                <div class="pizza-card">
+                    <img src="/Medias/Pizza/Végétarienne.png" alt="Pizza Végétarienne">
+                    <h3>Pizza Végétarienne</h3>
+                    <p>Tomate, mozzarella, légumes grillés</p>
+                    <span class="price">11,00 €</span>
+                    <a href="#" class="btn-order">Commander</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Section Base Crème -->
+        <div class="pizza-category">
+            <h2>Base Crème</h2>
+            <div class="pizza-grid">
+                <div class="pizza-card">
+                    <img src="/Medias/Pizza/4 Fromages.png" alt="Pizza Quatre Fromages">
+                    <h3>Pizza Quatre Fromages</h3>
+                    <p>Crème, mozzarella, gorgonzola, parmesan, brie</p>
+                    <span class="price">13,00 €</span>
+                    <a href="#" class="btn-order">Commander</a>
+                </div>
+                <div class="pizza-card">
+                    <img src="/Medias/Pizza/Hawaienne.png" alt="Pizza Hawaïenne">
+                    <h3>Pizza Hawaïenne</h3>
+                    <p>Crème, mozzarella, jambon, ananas</p>
+                    <span class="price">12,00 €</span>
+                    <a href="#" class="btn-order">Commander</a>
+                </div>
+                <div class="pizza-card">
+                    <img src="/Medias/Pizza/Truffe.png" alt="Pizza Truffe">
+                    <h3>Pizza Truffe</h3>
+                    <p>Crème, mozzarella, champignons à la truffe</p>
+                    <span class="price">15,00 €</span>
+                    <a href="#" class="btn-order">Commander</a>
+                </div>
+            </div>
+        </div> 
+</section>
+    <!-- Lien caché pour la Pizza Mystérieuse en bas à droite -->
+    <div id="secret-icon">
+        <a href="#" class="hidden-link" id="mysteryPizzaLink">🍕</a>
+    </div>
+
+    <!-- Fenêtre Pop-up pour la Pizza Mystérieuse -->
+    <div class="modal" id="mysteryModal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h2>Pizza Mystérieuse</h2>
+            <img src="/Medias/pizza mystérieuse.webp" alt="Pizza Mystérieuse" class="mystery-image">
+            <p>La légendaire pizza de Giovanni 'Il Maestro', un mélange unique de saveurs!</p>
+            <button class="order-button">Commander</button>
+        </div>
+    </div>
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025 Pizza Society. Tous droits réservés.</p>
+        <nav class="footer-nav">
+            <a href="/HTML/accueil.html">Accueil</a> |
+            <a href="/HTML/carte.html">Menu</a> |
+            <a href="/HTML/contact.html">Contact</a>
+        </nav>
+    </div>
+</footer>
+    <script>
+    document.querySelector('.btn-cta').addEventListener('click', function(e) {
+       e.preventDefault();
+       const target = document.querySelector(this.getAttribute('href'));
+       window.scrollTo({
+           top: target.offsetTop,
+           behavior: 'smooth'
+           });
+        });
+    </script>
+    <script>
+        document.getElementById('burger-menu').addEventListener('click', function(e) {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        });
+    </script>
+    <script>
+        // Active l'effet de clignotement au survol du texte "Bienvenue Chez Jonathan"
+        document.getElementById('heroTitle').addEventListener('mouseover', function() {
+            this.classList.add('blink');
+        });
+    
+        // Désactive l'effet de clignotement quand on quitte le survol
+        document.getElementById('heroTitle').addEventListener('mouseout', function() {
+            this.classList.remove('blink');
+        });
+
+
+        // Lien de la "Pizza Mystérieuse"
+        document.getElementById("mysteryPizzaLink").addEventListener("click", function(event) {
+            event.preventDefault();
+            console.log("Lien cliqué");
+            document.getElementById("mysteryModal").style.display = "flex";
+        });
+
+        // Ferme la fenêtre modale
+        document.getElementById("closeModal").addEventListener("click", function() {
+            document.getElementById("mysteryModal").style.display = "none";
+        });
+
+        // Ferme la modale en cliquant en dehors du contenu
+        window.addEventListener("click", function(event) {
+            if (event.target == document.getElementById("mysteryModal")) {
+                document.getElementById("mysteryModal").style.display = "none";
+            }
+        });
+</script>
+    </script>
+</body>
+</html>
+

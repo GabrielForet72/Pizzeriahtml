@@ -1,0 +1,557 @@
+/* Style de base */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f1e1;
+    background-image: url('/Medias/Background_V2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Logo personnalisé */
+.custom-logo {
+    width: 200px;
+    height: auto;
+    transform: scale(1.4);
+    margin-top: -10px;
+    margin-bottom: -10px; 
+}
+
+/* Barre de navigation */
+.custom-navbar {
+    background-color: #8b0000 !important;
+    padding: 20px 0;
+}
+
+.custom-navbar .navbar-brand {
+    font-family: 'Cursive', sans-serif;
+    color: #00e5ff;
+    font-size: 28px;
+}
+
+/* Liens de navigation */
+.custom-navbar .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #00e5ff;
+    transform: scale(1.05);
+}
+
+/* Menu burger */
+.navbar-toggler {
+    display: none;
+}
+
+/* Responsibilité */
+@media (max-width: 768px) {
+    .custom-logo {
+        width: 150px;
+    }
+
+    .navbar-toggler {
+        display: block;
+        border: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url('/Medias/Background_V2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar-nav {
+        background-color: #8b0000;
+    }
+
+    .navbar-collapse {
+        padding: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        color: #ffffff;
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+}
+
+/* Effet de soulignement avec une barre glissante */
+.nav-links a::before {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff8c42;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Zoom léger et changement de couleur au survol */
+.nav-links a:hover {
+    color: #00e5ff;
+    transform: scale(1.1);
+}
+
+/* Container pour la mise en page */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section du hero */
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-top: -10px;
+}
+
+.hero-section {
+    background-image: url(/Medias/Pizza\ sombre\ demi.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    background-color: #8b0000;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    
+}
+
+.hero-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-section h1 {
+    font-family: "Ephesis", cursive;
+    font-weight: 300;
+    font-style: normal;
+}
+.hero-section p {
+    color: #f5f1e1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+/* Effet Néon pour le texte "Pizza Society" */
+.neon-text {
+    margin-top: -80px;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    font-size: 150px;
+    color: #00e5ff;
+    text-shadow: 
+      0 0 10px #00e5ff,
+      0 0 20px #00e5ff,
+      0 0 30px #00e5ff,
+      0 0 40px #ff8c42,
+      0 0 50px #ff8c42,
+      0 0 60px #ff8c42,
+      0 0 70px #ff8c42;
+}
+
+/* Animation de clignotement */
+@keyframes neon-blink {
+    0%, 100% {
+        text-shadow: 
+          0 0 10px #00e5ff,
+          0 0 20px #00e5ff,
+          0 0 30px #00e5ff,
+          0 0 40px #ff8c42,
+          0 0 50px #ff8c42,
+          0 0 60px #ff8c42,
+          0 0 70px #ff8c42;
+    }
+    50% {
+        text-shadow:
+          0 0 5px #00e5ff,
+          0 0 10px #00e5ff,
+          0 0 20px #00e5ff;
+    }
+}
+
+.neon-text.blink {
+    animation: neon-blink 2.5s infinite alternate;
+}
+
+.btn-cta {
+    background-color: #f5f1e1;
+    color: #8b0000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #8b0000;
+    color:#f5f1e1 ;
+}
+
+/* Animation d'apparition (fade-in + translation) */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .hero-section {
+        background-size: 100%;
+        height: 200px;
+        background-position: center bottom;
+        background-position: center 100%;
+    }
+    
+    .hero-section h1 {
+        font-size: 80px;
+        
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .btn-cta {
+        padding: 10px 10px;
+        font-size: 16px;
+    }
+}
+
+
+
+/* Style de la section d'introduction de la carte */
+.menu-intro {
+    text-align: center;
+    margin: 50px 20px;
+    background-color: #f5f1e1;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.menu-title {
+    font-size: 36px;
+    color: #8b0000;
+    font-family: 'Open sans', serif;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.menu-description {
+    font-size: 18px;
+    color: #333333;
+    font-family: 'Open sans';
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Style général de la carte des pizzas */
+.pizza-menu {
+    padding: 50px 20px;
+    background-color: #f5f1e1;
+    border-radius: 20px;
+}
+
+/* Titre de chaque section de pizza */
+.pizza-category h2 {
+    font-size: 28px;
+    color: #8b0000;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', serif;
+}
+
+/* Style du titre de chaque section de pizza */
+.pizza-category h2 {
+    font-size: 32px;
+    color: #8b0000;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+/* Ligne décorative sous le titre */
+.pizza-category h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #00e5ff;
+    margin: 10px auto 0;
+    border-radius: 4px;
+}
+
+/* Ombre douce pour donner de la profondeur au texte */
+.pizza-category h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Effet de dégradé léger */
+.pizza-category h2 {
+    background: linear-gradient(to right, #8b0000, #d9534f);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* Grille des pizzas */
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Style des cartes de pizza */
+.pizza-card {
+    background-color: #f5f1e1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+    
+}
+
+.pizza-card img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    transition: transform 2.5s ease-in-out;
+}
+
+.pizza-card h3 {
+    font-size: 24px;
+    color: #8b0000;
+}
+
+.pizza-card p {
+    font-size: 16px;
+    color: #333333;
+    margin: 10px 0;
+}
+
+.pizza-card .price {
+    font-size: 18px;
+    color: #00e5ff;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
+}
+
+.pizza-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pizza-card:hover img {
+    transform: rotate(360deg);
+}
+
+/* Adaptation mobile pour une colonne */
+@media (max-width: 768px) {
+    .pizza-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Effet néon sur les prix */
+.pizza-card .price {
+    font-size: 18px;
+    color: #00e5ff;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00e5ff, 0 0 15px #00e5ff, 0 0 30px #8b0000, 0 0 40px #8b0000;
+    animation: neonFlash 1.5s infinite alternate;
+}
+
+@keyframes neonFlash {
+    0% {
+        color: #00e5ff;
+        text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff, 0 0 30px #8b0000;
+    }
+    100% {
+        color: #8b0000;
+        text-shadow: 0 0 20px #8b0000, 0 0 40px #8b0000, 0 0 60px #8b0000;
+    }
+}
+
+.btn-order {
+    background-color: #8b0000;
+    color: #f5f1e1;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-order:hover {
+    background-color: #00e5ff;
+}
+
+/* Lien caché pour la pizza mystérieuse */
+#secret-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+
+#secret-icon:hover {
+    opacity: 1;
+}
+
+/* Fenêtre pop-up pour la pizza mystérieuse */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #f5f1e1;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h2 {
+    font-family: 'ephesis';
+    color: #8b0000;
+    text-shadow: 
+      0 0 10px #00e5ff,
+      0 0 20px #00e5ff,
+      0 0 30px #00e5ff,
+      0 0 40px #ff8c42,
+      0 0 50px #ff8c42,
+      0 0 60px #ff8c42,
+      0 0 70px #ff8c42;
+
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.order-button {
+    background-color: #8b0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #00e5ff;
+}
+
+.footer {
+    width: 100vw;
+    background-color: #8b0000;
+    color: #f5f1e1;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -4px 10px rgba(245, 241, 225, 0.1);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-nav a {
+    color: #f5f1e1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #8b0000;
+        width: 80%;
+        text-align: center;
+        gap: 20px;
+        padding: 20px 0;
+        box-shadow: 0 4px 10px hsla(0, 0%, 0%, 0.1);
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}

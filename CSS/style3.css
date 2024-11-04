@@ -1,0 +1,395 @@
+/* Style de base */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f1e1;
+    background-image: url('/Medias/Background_V2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Logo personnalisé */
+.custom-logo {
+    width: 200px;
+    height: auto;
+    transform: scale(1.4);
+    margin-top: -10px;
+    margin-bottom: -10px; 
+}
+
+/* Barre de navigation - Version bureau */
+.custom-navbar {
+    background-color: #8b0000 !important;
+    padding: 20px 0;
+}
+
+.custom-navbar .navbar-brand {
+    font-family: 'Open Sans', sans-serif !important; 
+    color: #00e5ff;
+    font-size: 28px;
+}
+
+/* Liens de navigation - Version bureau */
+.custom-navbar .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #00e5ff;
+    transform: scale(1.05);
+}
+
+/* Menu burger - Version bureau */
+.navbar-toggler {
+    display: none;
+}
+
+/* Responsibilité */
+@media (max-width: 768px) {
+    .custom-logo {
+        width: 150px;
+    }
+
+    .navbar-toggler {
+        display: block;
+        border: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url('/Medias/Background_V2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar-nav {
+        background-color: #8b0000 !important;
+    }
+
+    .navbar-collapse {
+        padding: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        color: #ffffff;
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+}
+
+/* Effet de soulignement avec une barre glissante */
+.nav-links a::before {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff8c42;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Zoom léger et changement de couleur au survol */
+.nav-links a:hover {
+    color: #00e5ff;
+    transform: scale(1.1);
+}
+
+/* Section Hero */
+.hero-section {
+    height: 400px;
+    background-image: url('/Medias/bg\ contact.png'); 
+    background-size: cover;
+    background-position: center 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f5f1e1;
+    position: relative;
+}
+
+/* Effet Néon pour le titre Pizza Society */
+.hero-title {
+    font-size: 100px;
+    font-family: 'ephesis';
+    color: #00e5ff;
+    text-shadow: 
+      0 0 10px #00e5ff,
+      0 0 20px #00e5ff,
+      0 0 30px #00e5ff,
+      0 0 40px #ff8c42,
+      0 0 50px #ff8c42,
+      0 0 60px #ff8c42,
+      0 0 70px #ff8c42;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation de clignotement au survol */
+.hero-title:hover {
+    animation: neon-blink 1.5s infinite alternate;
+}
+
+@keyframes neon-blink {
+    0%, 100% {
+        text-shadow: 
+          0 0 10px #00e5ff,
+          0 0 20px #00e5ff,
+          0 0 30px #00e5ff,
+          0 0 40px #ff8c42,
+          0 0 50px #ff8c42,
+          0 0 60px #ff8c42,
+          0 0 70px #ff8c42;
+    }
+    50% {
+        text-shadow:
+          0 0 5px #00e5ff,
+          0 0 10px #00e5ff,
+          0 0 15px #00e5ff;
+    }
+}
+
+
+.hero-subtitle {
+    font-size: 18px;
+    font-family: 'Open Sans';
+    margin-top: 10px;
+}
+
+/* Section Coordonnées et Carte */
+.contact-info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 20px;
+    background-color: #f5f1e1;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du titre des coordonnées */
+.contact-title {
+    font-size: 32px;
+    color: #8b0000;
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', serif;
+    position: relative;
+}
+
+/* Ligne décorative sous le titre */
+.contact-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #00e5ff;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+/* Style des coordonnées */
+.contact-details {
+    background-color: #f5f1e1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details a {
+    color: #8b0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+    color: #00e5ff;
+}
+
+/* Icônes et liens coordonnées */
+.contact-details p::before {
+    font-size: 24px;
+}
+
+/* Style de la carte */
+.maps-container {
+    flex: 1;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-info-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .maps-container {
+        max-width: 100%;
+    }
+}
+
+
+/* Section Notre Histoire */
+
+.history-text h2 {
+    font-size: 32px;
+    color: #8b0000;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.history-text h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #00e5ff;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+.history-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f5f1e1;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.history-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.history-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.history-text {
+    flex: 1;
+    max-width: 600px;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    padding: 30px;
+    background-color: #f5f1e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.history-text h2 {
+    font-size: 32px;
+    color: #8b0000;
+    margin-bottom: 20px;
+}
+
+
+/* Styles pour liens interactifs */
+.contact-info a[href^="tel"],
+.contact-info a[href^="mailto"],
+.contact-info a[href^="https"] {
+    font-weight: bold;
+}
+.footer {
+    width: 100vw;
+    background-color: #8b0000;
+    color: #f5f1e1;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -4px 10px rgba(245, 241, 225, 0.1);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-nav a {
+    color: #f5f1e1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+.maps-section, .history-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Adaptation Responsive */
+@media (max-width: 768px) {
+    .history-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .history-text {
+        padding: 10px;
+    }
+
+    .history-image img {
+        max-width: 100%;
+    }
+}
