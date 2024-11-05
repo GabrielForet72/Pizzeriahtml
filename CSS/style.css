@@ -12,7 +12,7 @@ body {
 }
 
 .first_page {
-    background-image: url(image/Background_V2.png) ;
+    background-image: url(Medias/Background_V2.png) ;
     background-size: cover;
     background-position: center;
 }
@@ -67,7 +67,7 @@ body {
     }
 
     .navbar-toggler-icon {
-        background-image: url('/image/Background_V2.png');
+        background-image: url('/Medias/Background_V2.png');
         background-size: contain;
         background-repeat: no-repeat;
         width: 30px;
@@ -128,7 +128,7 @@ body {
 
 .hero-section {
     height: 400px;
-    background-image: url('image/pizza\ society.png');  
+    background-image: url('Medias/pizza\ society.png');  
     background-size: cover;
     background-position: center 70%;
     display: flex;
@@ -507,7 +507,7 @@ height: auto;
 
 /* Section fait maison */
 .fait-maison {
-    background-image: url(image/background_2.png);
+    background-image: url(Medias/background_2.png);
     background-size:cover;
     background-position: center;
     margin: 0; 
