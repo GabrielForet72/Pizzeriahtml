@@ -55,44 +55,6 @@ body {
     display: none;
 }
 
-/* Responsibilité */
-@media (max-width: 768px) {
-    .custom-logo {
-        width: 150px;
-    }
-
-    .navbar-toggler {
-        display: block;
-        border: none;
-    }
-
-    .navbar-toggler-icon {
-        background-image: url('Background_V2.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 30px;
-        height: 30px;
-    }
-
-    .navbar-nav {
-        background-color: #8b0000;
-    }
-
-    .navbar-collapse {
-        padding: 10px;
-    }
-
-    .navbar-nav .nav-link {
-        color: #f5f1e1;
-        font-size: 20px;
-        padding: 10px 0;
-    }
-
-    .navbar-nav .nav-item {
-        margin: 10px 0;
-    }
-}
-
 /* Effet de soulignement avec une barre glissante */
 .nav-links a::before {
     position: absolute;
@@ -200,30 +162,6 @@ body {
     100% {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-
-@media (max-width: 768px) {
-    .hero-section {
-        background-size: 100%;
-        height: 200px;
-        background-position: center bottom;
-        background-position: center 100%;
-    }
-    
-    .hero-section h1 {
-        font-size: 80px;
-        
-    }
-
-    .hero-section p {
-        font-size: 16px;
-    }
-
-    .btn-cta {
-        padding: 10px 10px;
-        font-size: 16px;
     }
 }
 
@@ -346,44 +284,6 @@ height: auto;
     right: 50px;
 }
 
-@media (max-width: 768px) {
-    .pizza-du-moment h1 br {
-        display: none;
-    }
-    .pizza-du-moment h1 {
-        font-size: 60px; 
-        line-height: 50px; 
-    }
-    .pizza-du-moment h1 span {
-        font-size: 60px;
-        margin-left: 10px;
-    }
-    .cards-container {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    .card {
-        width: 90%;
-        margin-bottom: 20px; 
-    }
-
-    .card-title {
-        font-size: 30px;
-    }
-
-    .card-description {
-        font-size: 20px; 
-    }
-
-    .card-button {
-        font-size: 20px; 
-    }
-    .carousel-btn {
-        font-size: 00px;
-    }
-}
-
 /* Section famille */
 .family-story {
     display: flex;
@@ -456,53 +356,6 @@ height: auto;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-@media (max-width: 768px) {
-    .family-story {
-        background-color: #8b0000;
-        flex-direction: column; 
-        padding: 20px;
-    }
-   
-    .family-story h1,
-    .family-story h1 span {
-        color: #f5f1e1;
-        font-size: 60px;
-        line-height: 8vw; 
-    }
-
-    .content {
-        width: 90%; 
-        font-size: 5vw; 
-    }
-
-    .image-container {
-        width: 90%; 
-        margin-right: 0; 
-    }
-
-    .card-maison {
-        margin: 0 20px; 
-    }
-
-    .container p {
-        margin-right: 20px; 
-    }
-
-    .btn-savoir-plus {
-        padding: 10px 20px; 
-        font-size: 4vw; 
-    }
-
-    .btn_carte {
-        padding: 10px 20px; 
-        font-size: 16px; 
-    }
-
-    .image_repas img {
-        margin-top: 100px; 
-    }
 }
 
 /* Section fait maison */
@@ -623,46 +476,6 @@ height: auto;
     color: #00e5ff;
 }
 
-@media (max-width: 768px) {
-    .card-maison {
-        margin: 5px
-    }
-
-    .fait-maison h2 {
-        font-size: 60px; 
-        line-height: 45px; 
-    }
-
-    .fait-maison h2 span {
-        font-size: 60px; 
-       margin-left: 10px; 
-    }
-
-    .container p {
-        margin-right: 0; 
-        text-align: center; 
-        font-size: 18px;
-    }
-
-    .image_repas img {
-        margin-top: 0px; 
-    }
-
-    .btn_carte {
-        padding: 10px 15px; 
-        font-size: 14px; 
-        margin-bottom: 80px; 
-    }
-
-    .titre-témoignage h3 {
-        font-size: 60px; 
-        line-height: 50px; 
-    }
-    .image_repas {
-        display: none; 
-}
-}
-
 /* Section témoignages */
 .Témoignages {
     background-color:#8b0000;
@@ -763,24 +576,6 @@ object-fit: cover;
     color: #00e5ff;
     font-size: 35px;
     margin-bottom: 50px;
-}
-
-@media (max-width: 768px) {
-    .slider {
-        width: 100%; 
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        padding: 0 10px; 
-    }
-
-    .slide {
-        width: 100%; 
-        max-width: 100%; 
-        margin: 15px 0; 
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
-        border-radius: 8px; 
-    }
 }
 
 /* Section Livraison */
@@ -901,70 +696,6 @@ object-fit: cover;
     padding: 8px 16px; 
 }
 
-    @media (max-width: 768px) {
-        .livraison .delivery-logos {
-            justify-content: center; 
-            margin-left: 0; 
-            gap: 20px; 
-        }
-
-        .logo-livraison {
-            display: none;
-        }
-    
-        .livraison .delivery-logos img {
-            width: 80px; 
-            height: 80px;
-        }
-
-        .titre-livraison {
-            display: flex;
-            flex-direction: column; 
-            align-items: center; 
-            text-align: center; 
-            padding: 20px; 
-        }
-    
-        .titre-livraison h2 {
-            font-size: 60px; 
-            line-height: 50px; 
-        }
-    
-        .titre-livraison h2 span {
-            font-size: 60px; 
-            margin-left: 30px;
-        }
-    
-        .livraison {
-            padding: 20px; 
-            text-align: center; 
-        }
-    
-        .livraison .delivery-logos {
-            display: flex;
-            justify-content: center; 
-            flex-wrap: wrap; 
-            gap: 20px; 
-            margin-top: 20px; 
-        }
-    
-        .livraison .delivery-logos img {
-            width: 60px; 
-            height: 60px;
-            transition: transform 0.3s ease; 
-        }
-    
-        .livraison .delivery-logos img:hover {
-            transform: scale(1.1); 
-        }
-    
-        .btn-commandez {
-            font-size: 16px; 
-            padding: 10px 20px; 
-            margin-top: 20px; 
-        }
-    }
-
 /* Footer */
 .footer {
     background-color: #8b0000;
@@ -979,111 +710,4 @@ object-fit: cover;
     margin: 0 10px;
     text-decoration: none;
     font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #8b0000;
-        width: 80%;
-        text-align: center;
-        gap: 20px;
-        padding: 20px 0;
-        box-shadow: 0 4px 10px hsla(0, 0%, 0%, 0.1);
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .burger-menu {
-        display: block;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-}
-/* Ajustements pour les écrans de bureau standard */
-@media (min-width: 1024px) and (max-width: 1440px) {
-
-    /* Section Hero */
-    .hero-section {
-        height: 400px;
-        background-position: center 30%;
-    }
-
-    .hero-title {
-        font-size: 80px; 
-    }
-
-    .hero-subtitle {
-        font-size: 20px;
-    }
-
-    /* Section Pizzas du moment */
-    .pizza-du-moment h1 {
-        font-size: 80px;
-        margin-left: 30px;
-        line-height: 80px;
-        padding-top: 30px;
-    }
-
-    .pizza-du-moment img {
-        width: 70%;
-        max-width: 500px;
-    }
-
-    /* Section Famille */
-    .family-story h1 {
-        font-size: 80px;
-        line-height: 60px;
-        margin-top: 40px;
-        margin-left: 20px;
-    }
-
-    .family-story h1 span {
-        font-size: 80px;
-        margin-left: 5%;
-    }
-
-    .family-story p {
-        font-size: 18px;
-        width: 80%;
-        margin-left: 10%;
-    }
-
-    .image-container {
-        width: 350px;
-        height: 350px;
-    }
-
-    /* Section Témoignages */
-    .slide p {
-        font-size: 24px;
-    }
-
-    .author span {
-        font-size: 24px;
-    }
-
-    /* Section Livraison */
-    .titre-livraison h2 {
-        font-size: 80px;
-        line-height: 60px;
-    }
-
-    .titre-livraison h2 span {
-        font-size: 80px;
-        margin-left: 100px;
-    }
-    
-    .livraison .delivery-logos img {
-        width: 100px;
-        height: 100px;
-    }
 }
