@@ -5,20 +5,18 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'open sans', sans-serif;
     line-height: 1.6;
     background-color:#f5f1e1;
     overflow-x: hidden;
 }
 
-
-
 .first_page {
     background-image: url(image/Background_V2.png) ;
     background-size: cover;
     background-position: center;
-   
 }
+
 .custom-logo {
     width: 200px;
     height: auto;
@@ -29,7 +27,7 @@ body {
 
 /* Barre de navigation - Version bureau */
 .custom-navbar {
-    background-color: #8b0000 ;
+    background-color: #8b0000 !important;
     padding: 20px 0;
 }
 
@@ -41,7 +39,7 @@ body {
 
 /* Liens de navigation - Version bureau */
 .custom-navbar .navbar-nav .nav-link {
-    color: #ffffff;
+    color:#f5f1e1;
     font-size: 18px;
     margin: 0 15px;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -85,7 +83,7 @@ body {
     }
 
     .navbar-nav .nav-link {
-        color: #ffffff;
+        color: #f5f1e1;
         font-size: 20px;
         padding: 10px 0;
     }
@@ -102,7 +100,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ff8c42;
+    background-color:#8b0000;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out;
@@ -188,16 +186,6 @@ body {
     margin-top: 10px;
 }
 
-.btn-cta {
-    background-color: #f5f1e1;
-    color: #8b0000;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
 .btn-cta:hover {
     background-color: #8b0000;
     color:#f5f1e1 ;
@@ -215,7 +203,7 @@ body {
     }
 }
 
-/* Responsivité */
+
 @media (max-width: 768px) {
     .hero-section {
         background-size: 100%;
@@ -238,12 +226,14 @@ body {
         font-size: 16px;
     }
 }
+
+/* Section pizza du moment */
 .pizza-du-moment {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Deux colonnes de largeur égale */
-    width: 100%; /* Prend toute la largeur de la page */
-    
+    grid-template-columns: 2fr 1fr; 
+    width: 100%; 
 }
+
 .pizza-du-moment h1 {
     font-family: "Ephesis", cursive;
     font-size: 200px;
@@ -256,19 +246,17 @@ body {
     margin-top: 100px;
     color: #8b0000;
 }
+
 .pizza-du-moment  h1 span {
     margin: 250px;
     font-size: 200px;
-   
-    
 }
-.pizza-du-moment img {
-    
-width: 100%;
-height: auto;
 
-    
+.pizza-du-moment img {   
+width: 100%;
+height: auto;   
 }
+
 .carousel {
     display: flex;
     align-items: center;
@@ -278,27 +266,24 @@ height: auto;
     overflow: hidden;
     padding: 20px 0;
     margin-bottom: 70px;
-
 }
 
 .cards-container {
     display: flex;
-    justify-content: space-between; /* Espace entre les cartes */
-    width: 90%; /* Prend toute la largeur de la page */
-     /* Largeur maximale du conteneur */
-    gap: 20px; /* Espace entre les cartes */
-    padding: 0 20px; /* Marge intérieure */
+    justify-content: space-between; 
+    width: 90%; 
+    gap: 20px; 
+    padding: 0 20px; 
     box-shadow: 5px;
 }
 
 /* Style général de chaque carte */
 .card {
-    
     background-color: #8b0000;
     border-radius: 15px;
     padding: 20px;
     text-align: center;
-    flex: 1; /* Chaque carte prend un tiers de l'espace disponible */
+    flex: 1; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -311,7 +296,6 @@ height: auto;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
-
 }
 
 /* Style de la description */
@@ -334,9 +318,8 @@ height: auto;
     font-size: 25px;
     font-family: 'Arial', sans-serif;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
     margin-bottom: 30px;
-   
 }
 
 .card-button:hover {
@@ -353,16 +336,52 @@ height: auto;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    
 }
 
 .left-btn {
     left: 50px;
-    
 }
 
 .right-btn {
     right: 50px;
+}
+
+@media (max-width: 768px) {
+    .pizza-du-moment h1 br {
+        display: none;
+    }
+    .pizza-du-moment h1 {
+        font-size: 60px; 
+        line-height: 50px; 
+    }
+    .pizza-du-moment h1 span {
+        font-size: 60px;
+        margin-left: 10px;
+    }
+    .cards-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px; 
+    }
+
+    .card-title {
+        font-size: 30px;
+    }
+
+    .card-description {
+        font-size: 20px; 
+    }
+
+    .card-button {
+        font-size: 20px; 
+    }
+    .carousel-btn {
+        font-size: 00px;
+    }
 }
 
 /* Section famille */
@@ -373,18 +392,14 @@ height: auto;
     padding: 50px;
     color: #FFF4E0;
     text-align: center;
-    
 }
 
 .content {
-    
     padding: 40px;
     text-align: center;
-    flex: 1; /* Chaque carte prend un tiers de l'espace disponible */
+    flex: 1; 
     width: 55%;
     font-size: 35px;
-
-    
 }
 
 .family-story h1 {
@@ -397,15 +412,14 @@ height: auto;
     line-height: 80px;
     margin-bottom: 80px;
     margin-top: 100px;
-
 }
-.family-story h1 span{
 
+.family-story h1 span{
     font-size: 150px;
     text-align: left;
     margin-left: 30%;
-
 }
+
 .family-story p {
     text-align: left;
     margin-bottom: 60px;
@@ -422,8 +436,8 @@ height: auto;
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 50px;
-    
 }
+
 .btn-savoir-plus :hover {
     background-color: #8b0000;
     color:#f5f1e1 ;
@@ -434,7 +448,7 @@ height: auto;
     height: 500px;
     overflow: hidden;
     border-radius: 50%;
-    border: 10px solid #FFF4E0;
+    border: 10px solid #00e5ff;
     margin-right: 120px;
 }
 
@@ -444,26 +458,66 @@ height: auto;
     object-fit: cover;
 }
 
+@media (max-width: 768px) {
+    .family-story {
+        background-color: #8b0000;
+        flex-direction: column; 
+        padding: 20px;
+    }
+   
+    .family-story h1,
+    .family-story h1 span {
+        color: #f5f1e1;
+        font-size: 60px;
+        line-height: 8vw; 
+    }
 
+    .content {
+        width: 90%; 
+        font-size: 5vw; 
+    }
 
+    .image-container {
+        width: 90%; 
+        margin-right: 0; 
+    }
 
+    .card-maison {
+        margin: 0 20px; 
+    }
 
+    .container p {
+        margin-right: 20px; 
+    }
 
+    .btn-savoir-plus {
+        padding: 10px 20px; 
+        font-size: 4vw; 
+    }
 
+    .btn_carte {
+        padding: 10px 20px; 
+        font-size: 16px; 
+    }
 
+    .image_repas img {
+        margin-top: 100px; 
+    }
+}
 
-
+/* Section fait maison */
 .fait-maison {
     background-image: url(image/background_2.png);
     background-size:cover;
     background-position: center;
-    margin: 0; /* Supprime les marges par défaut */
-    padding: 0; /* Supprime le remplissage par défaut */
+    margin: 0; 
+    padding: 0; 
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .card-maison {
     display: flex;
     flex-direction: column;
@@ -471,17 +525,16 @@ height: auto;
     margin-left: 150px; 
     margin-bottom: 300px ;
     margin-top: 100px;
-    align-items: center; /* Centre les éléments horizontalement */
+    align-items: center; 
     text-align: center;
 }
+
 .top {
     display: flex;
     margin-top: 250px ;
-    align-items: center; /* Centre l'image et le titre horizontalement */
+    align-items: center; 
     text-align: center;
 }
-
-
 
 .fait-maison h2 {
     font-family: "Ephesis", cursive;
@@ -499,37 +552,35 @@ height: auto;
     color: #ffffff;
     font-size: 150px;
     margin-left: 400px;
-
 }
+
 .container{
     width: 100%;
 }
+
 .container p {
-    
-    
     color: #8b0000;
     text-align: left;
     margin-right: 100px;
-    
 }
+
 .image_repas {
     flex: 1;
     width: auto;
-    max-width: 100%; /* Limite la taille de l'image pour ne pas dépasser le conteneur */
+    max-width: 100%; 
     height: auto; 
 }
 
 .image_repas img {
-    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    width: 100%; 
     margin-top: 200px;
-    height: auto; /* Maintient le ratio d'aspect de l'image */
+    height: auto; 
 }
-
 
 .btn_carte {
     display: inline-block;
     padding: 15px 30px;
-    background: linear-gradient(135deg, #00e5ff, #8b0000); /* Dégradé */
+    background: linear-gradient(135deg, #00e5ff, #8b0000); 
     color: #f5f1e1;
     border: none;
     border-radius: 30px;
@@ -543,37 +594,25 @@ height: auto;
     margin-bottom: 200px;
 }
 
-/* Effet de survol */
 .btn_carte:hover {
     color: #f5f1e1;
     text-decoration: none;
-    background: linear-gradient(135deg, #8b0000,#00e5ff); /* Inverse le dégradé */
-    transform: translateY(-3px); /* Léger effet de levée */
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Augmente l'ombre */
+    background: linear-gradient(135deg, #8b0000,#00e5ff); 
+    transform: translateY(-3px); 
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); 
 }
 
-/* Effet d'activation (quand on clique) */
 .btn_carte:active {
     transform: translateY(0px);
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .titre-témoignage{ 
     display: flex;
     justify-content: center;
     background-color: #f5f1e1;
 }
+
 .titre-témoignage h3 {
     font-family: "Ephesis", cursive;
     font-size: 150px;
@@ -583,12 +622,51 @@ height: auto;
     line-height: 120px;
     color: #00e5ff;
 }
-.Témoignages {
 
-background-color:#8b0000;
+@media (max-width: 768px) {
+    .card-maison {
+        margin: 5px
+    }
+
+    .fait-maison h2 {
+        font-size: 60px; 
+        line-height: 45px; 
+    }
+
+    .fait-maison h2 span {
+        font-size: 60px; 
+       margin-left: 10px; 
+    }
+
+    .container p {
+        margin-right: 0; 
+        text-align: center; 
+        font-size: 18px;
+    }
+
+    .image_repas img {
+        margin-top: 0px; 
+    }
+
+    .btn_carte {
+        padding: 10px 15px; 
+        font-size: 14px; 
+        margin-bottom: 80px; 
+    }
+
+    .titre-témoignage h3 {
+        font-size: 60px; 
+        line-height: 50px; 
+    }
+    .image_repas {
+        display: none; 
+}
 }
 
-
+/* Section témoignages */
+.Témoignages {
+    background-color:#8b0000;
+}
 
 .slider {
     display: flex;
@@ -597,14 +675,13 @@ background-color:#8b0000;
     padding: 20px;
     position: relative;
 }
-/* Témoignages */
+
 .slide {
     flex: 1;
     text-align: center;
     margin-top: 50px;
     padding: 10px;
     border-radius: 8px;
-    
 }
 
 .slide p {
@@ -617,6 +694,7 @@ background-color:#8b0000;
     color: #8b0000;
     line-height: 110%;
 }
+
 .bubble {
     position: relative;
     display: inline-block;
@@ -630,7 +708,6 @@ background-color:#8b0000;
     max-width: 90%;
 }
 
-
 .author {
     display: flex;
     align-items: center;
@@ -639,10 +716,11 @@ background-color:#8b0000;
 }
 
 .author img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     margin-right: 8px;
+object-fit: cover;
 }
 
 .author span {
@@ -652,35 +730,60 @@ background-color:#8b0000;
     margin-bottom: 50px;
 }
 
+.bubble {
+    position: relative;
+    display: inline-block;
+    background-color: #f5f1e1;
+    padding: 25px;
+    border-radius: 8px;
+    color: #8b0000;
+    font-size: 24px;
+    font-style: italic;
+    text-align: left;
+    max-width: 90%;
+}
 
+.author {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 50px;
+}
 
+.author img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+}
 
+.author span {
+    margin-left: 30px;
+    color: #00e5ff;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
 
+@media (max-width: 768px) {
+    .slider {
+        width: 100%; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        padding: 0 10px; 
+    }
 
+    .slide {
+        width: 100%; 
+        max-width: 100%; 
+        margin: 15px 0; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+        border-radius: 8px; 
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Livraison */
+/* Section Livraison */
 .livraison {
     display: flex;
     align-items: center;
@@ -692,7 +795,7 @@ background-color:#8b0000;
 .container {
     padding: 40px;
     text-align: center;
-    flex: 1; /* Chaque carte prend un tiers de l'espace disponible */
+    flex: 1; 
     width: 55%;
     font-size: 35px;
 }
@@ -707,17 +810,18 @@ background-color:#8b0000;
     line-height: 80px;
     color: #8b0000;
 }
+
 .titre-livraison h2{
     font-size: 150px;
-
     font-style: italic;
     font-weight: 300;
     text-align: left;
     line-height: 80px;
 }
+
 .titre-livraison h2 span{
-font-size: 150px;
-margin-left: 300px;
+    font-size: 150px;
+    margin-left: 300px;
 }
 
 .livraison .delivery-logos {
@@ -726,11 +830,9 @@ margin-left: 300px;
     gap: 100px;
     margin-top: 100px;
     margin-left: 100px;
-    
 }
 
 .livraison .delivery-logos img {
-    
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -738,16 +840,16 @@ margin-left: 300px;
     transition: transform 0.3s ease;
 }
 
-
 .livraison .delivery-logos img:hover {
     transform: scale(1.3);
 }
+
 .logo-livraison {
-    width: 700px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
     margin-right: 150px;
-    
 }
+
 .logo-livraison img {
     width: 100%;
     height: 100%;
@@ -761,11 +863,10 @@ margin-left: 300px;
     margin-top: 50px;
     margin-bottom: 150px;
 }
+
 .btn-commandez {
-    
-    
     padding: 15px 30px;
-    background: linear-gradient(135deg, #00e5ff, #8b0000); /* Dégradé */
+    background: linear-gradient(135deg, #00e5ff, #8b0000); 
     color: #f5f1e1;
     border: none;
     border-radius: 30px;
@@ -777,10 +878,92 @@ margin-left: 300px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
-.btn-commandez :hover {
-    background-color: #d55a3b;
+
+.btn-commandez:hover {
+    color: #f5f1e1;
+    text-decoration: none;
+    background: linear-gradient(135deg, #8b0000,#00e5ff); 
+    transform: translateY(-3px); 
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); 
 }
 
+.btn-commandez:active {
+    transform: translateY(0px);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.livraison .delivery-logos img {
+    width: 60px; 
+    height: 60px;
+}
+
+.btn-commandez {
+    padding: 8px 16px; 
+}
+
+    @media (max-width: 768px) {
+        .livraison .delivery-logos {
+            justify-content: center; 
+            margin-left: 0; 
+            gap: 20px; 
+        }
+
+        .logo-livraison {
+            display: none;
+        }
+    
+        .livraison .delivery-logos img {
+            width: 80px; 
+            height: 80px;
+        }
+
+        .titre-livraison {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+            padding: 20px; 
+        }
+    
+        .titre-livraison h2 {
+            font-size: 60px; 
+            line-height: 50px; 
+        }
+    
+        .titre-livraison h2 span {
+            font-size: 60px; 
+            margin-left: 30px;
+        }
+    
+        .livraison {
+            padding: 20px; 
+            text-align: center; 
+        }
+    
+        .livraison .delivery-logos {
+            display: flex;
+            justify-content: center; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            margin-top: 20px; 
+        }
+    
+        .livraison .delivery-logos img {
+            width: 60px; 
+            height: 60px;
+            transition: transform 0.3s ease; 
+        }
+    
+        .livraison .delivery-logos img:hover {
+            transform: scale(1.1); 
+        }
+    
+        .btn-commandez {
+            font-size: 16px; 
+            padding: 10px 20px; 
+            margin-top: 20px; 
+        }
+    }
 
 /* Footer */
 .footer {
@@ -797,6 +980,7 @@ margin-left: 300px;
     text-decoration: none;
     font-size: 14px;
 }
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
