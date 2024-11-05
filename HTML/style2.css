@@ -2,7 +2,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f5f1e1;
-    background-image: url('/Medias/Background_V2.png');
+    background-image: url('Background_V2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,7 +62,7 @@ body {
     }
 
     .navbar-toggler-icon {
-        background-image: url('/Medias/Background_V2.png');
+        background-image: url('Background_V2.png');
         background-size: contain;
         background-repeat: no-repeat;
         width: 30px;
@@ -129,7 +129,7 @@ body {
 }
 
 .hero-section {
-    background-image: url(/Medias/Pizza\ sombre\ demi.png);
+    background-image: url(Pizza\ sombre\ demi.png);
     background-position: center;
     background-repeat: no-repeat;
     bottom: 0;
