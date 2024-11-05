@@ -115,7 +115,7 @@ body {
 /* Section Hero */
 .hero-section {
     height: 400px;
-    background-image: url('/Medias/bg\ contact.png'); 
+    background-image: url('bg\ contact.png'); 
     background-size: cover;
     background-position: center 70%;
     display: flex;
