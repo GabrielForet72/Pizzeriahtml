@@ -62,7 +62,7 @@ body {
     }
 
     .navbar-toggler-icon {
-        background-image: url('/Medias/Background_V2.png');
+        background-image: url('Background_V2.png');
         background-size: contain;
         background-repeat: no-repeat;
         width: 30px;
