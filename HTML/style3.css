@@ -2,7 +2,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f5f1e1;
-    background-image: url('/Medias/Background_V2.png');
+    background-image: url('Background_V2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
